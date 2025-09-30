@@ -8,7 +8,7 @@ const tabs = [
   { id: 'tab-3', title: 'Tab 3', content: 'Some text 3' },
 ];
 
-export const TabsPage = () => {
+export const Tabs: React.FC = () => {
   const { tabId } = useParams();
   const tabContent =
     tabs.find(tab => tab.id === tabId)?.content || 'Please select a tab';
