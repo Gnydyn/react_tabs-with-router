@@ -2,19 +2,18 @@ import React from 'react';
 import {
   Navigate,
   Route,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
 } from 'react-router-dom';
 import { App } from './App';
-import { HomePage } from './components/HomePage/HomePage';
-import { Tabs } from './components/TabsPage';
+import { Tabs } from './components/components/Tabs';
 
 export const Root = () => (
   <Router>
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="home" element={<Navigate to="/" replace />} />
-        <Route index element={<HomePage />} />
+        <Route index element={<h1 className="title">Home page</h1>} />
         <Route path="tabs">
           <Route index element={<Tabs />} />
           <Route path=":tabId" element={<Tabs />} />

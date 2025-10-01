@@ -15,8 +15,6 @@ export const Tabs: React.FC = () => {
 
   return (
     <div data-cy="TabsComponent">
-      <h1 className="title">Tabs page</h1>
-      {/* <h1 className="title">Page not found</h1> */}
       <div className="tabs is-boxed">
         <ul>
           {tabs.map(tab => (
